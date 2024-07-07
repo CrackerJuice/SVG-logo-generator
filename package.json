@@ -1,0 +1,13 @@
+{
+    "name": "svg-logo-generator",
+    "version": "1.0.0",
+    "description": "Generates a SVG logo using the terminal",
+    "main": "index.js",
+    "scripts": {
+        "test": "npm test"
+    },
+    "dependencies": {
+        "jest": "29.4.3",
+        "inquirer":"8.2.4"
+    }
+}
