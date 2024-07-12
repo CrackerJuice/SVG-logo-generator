@@ -1,12 +1,7 @@
-const inquirer =require("inquirer");
+const inquirer = require('inquirer');
+const fs = require('fs');
 const {circle, triangle, square}= require ("./lib/shapes");
 
-class svg {//come back to this
-    constructor(){
-        this.text="";
-        this.shape="";
-    }
-}
 const questions =[
     {
         type: "checkbox",
@@ -31,9 +26,33 @@ const questions =[
     }
 ];
 
-function writeToFile(fileName, data){
-    FileSystem.writeToFile(fileName, data)
-    {
-        console.log("Generating your SVG logo....");
-    }
-};
+function generateSVG(shapes, bgColor, text, textColor) {
+  return `
+    <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500">
+      <rect width="100%" height="100%" fill="${bgColor}" />
+      <text x="50%" y="50%" text-anchor="middle" fill="${textColor}" font-size="48" dy=".3em">
+        ${text}
+      </text>
+    </svg>
+  `;
+}
+
+async function writeToFile(fileName, data) {
+  try {
+    await fs.promises.writeFile(fileName, data);
+    console.log("Logo successfully generated!");
+  } catch (error) {
+    console.error("Could not generate", error);
+  }
+}
+
+async function main() {
+  console.log('Starting logo generator...');
+
+  const answers = await inquirer.prompt(questions);
+  const svg = generateSVG(answers.shapes, answers.bgColor, answers.text, answers.textColor);
+
+  await writeToFile('logo.svg', svg);
+}
+
+main();
