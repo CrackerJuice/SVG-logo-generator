@@ -10,7 +10,7 @@ To use this app, open index.js in the terminal, type "npm i" to install the requ
 # Testing
 run "npm test" in the terminal to run tests.
 
-##Contacts and app demo
+## Contacts and app demo
 Email me at alex.marie3976@gmail.com
 See my other projects at [CrackerJuice](https://github.com/CrackerJuice)
 [Demo video]
