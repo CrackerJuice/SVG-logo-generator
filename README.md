@@ -1,6 +1,9 @@
 # SVG logo generator 
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
+## Description
+This application generates a simple svg logo for you based off of your answers that you are asked in the terminal.
+
 ## Installation
 run "npm i" in the terminal to install the packages required to run this app.
 
