@@ -4,10 +4,12 @@
     "description": "Generates a SVG logo using the terminal",
     "main": "index.js",
     "scripts": {
-        "test": "npm test"
+        "test": "jest"
     },
     "dependencies": {
-        "jest": "29.4.3",
-        "inquirer":"8.2.4"
+        "inquirer": "8.2.4"
+    },
+    "devDependencies": {
+        "jest": "^29.7.0"
     }
 }

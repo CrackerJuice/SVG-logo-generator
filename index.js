@@ -42,7 +42,7 @@ function generateSVG(shape, bgColor, text, textColor) {
       break;
     default:
       break;
-  }
+  } 
 
   return `
     <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500">
