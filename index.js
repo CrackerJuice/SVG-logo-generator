@@ -4,7 +4,7 @@ const { circle, triangle, square } = require('./lib/shapes');
 
 const questions = [
   {
-    type: 'list',//changes checkbox type to list type 
+    type: 'list',//changed checkbox type to list type 
     name: 'shape',
     message: 'What shape do you want your logo to be?',
     choices: ['circle', 'triangle', 'square'],
